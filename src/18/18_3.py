@@ -40,7 +40,6 @@ async def main():
         streaming=True,
         callbacks=[MyFlowerShopSyncHandler(), MyFlowerShopAsyncHandler()],
     )
-
     # 异步生成聊天回复
     await flower_shop_chat.agenerate([[HumanMessage(content="哪种花卉最适合生日？只简单说3种，不超过50字")]])
 
